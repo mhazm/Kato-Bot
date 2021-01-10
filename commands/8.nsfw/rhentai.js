@@ -3,7 +3,7 @@ const neko = require('nekos.life')
 const { nsfw } = new neko()
 
 exports.run = async (client, message, args) => {
-  if (!['710431360954794004'].includes(message.channel.id)) return;
+  if (!message.channel.nsfw) return;
   try {
     rhentai = await nsfw.randomHentaiGif()
     let embed = new Discord.MessageEmbed()

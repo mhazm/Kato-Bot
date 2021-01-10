@@ -4,8 +4,9 @@ const Util = require("./util");
 const Komiku = require('./KomikuReader.js');
 const MangaDex = require('./MangaDex.js');
 const Samehadaku = require('./Samehadaku.js');
-
+const Kusonime = require('./Kusonime.js');
 module.exports = class katopos extends Client {
+  
   constructor(opt) {
     super(opt);
     this.config = require("../config/config.json");
@@ -20,6 +21,7 @@ module.exports = class katopos extends Client {
     this.komiku = new Komiku(this);
     this.mangadex = new MangaDex(this);
     this.samehadaku = new Samehadaku(this);
+    this.kusonime = new Kusonime(this);
 
   }
 };

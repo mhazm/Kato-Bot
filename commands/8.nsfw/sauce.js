@@ -39,11 +39,11 @@ exports.run = async (client, message, args) => {
 
             for (const [key, value] of Object.entries(header)) {
                 if (['thumbnail', 'dupes', 'index_id'].includes(key)) continue;
-                embed.addField(key, value, true);
+                embed.addField(key ? key : 'no name', value ? value : '-', true);
             }
             for (const [key, value] of Object.entries(data)) {
                 if (key == 'ext_urls') continue;
-                embed.addField(key, value, true);
+                embed.addField(key ? key : 'no name', value ? value : '-', true);
             }
             temp.push(embed);
             i++;

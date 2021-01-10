@@ -4,7 +4,7 @@ const db = require('quick.db');
 
 exports.run = async (client, message, args) => {
 
-  if (!['710431360954794004', '496983030993518592'].includes(message.channel.id)) return;
+  if (!message.channel.nsfw) return;
 
   /* get mainURL in database */
   let source;

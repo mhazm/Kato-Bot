@@ -3,7 +3,7 @@ const scathach = require('scathach-api')
 const { nsfw } = new scathach()
 
 exports.run = async (client, message, args) => {
-  if (!['710431360954794004'].includes(message.channel.id)) return;
+  if (!message.channel.nsfw) return;
   try {
     rhentai = await nsfw.jav()
     let embed = new Discord.MessageEmbed()

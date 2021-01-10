@@ -30,7 +30,7 @@ if (!args[0]) return message.reply(`no parameter has been given\n
 \`uniform\` \`upskirt\` \`voyeur\` \`wedding\` \`wet\` \`wife\` \`yoga_pants\`
 `);
     
-  if (!['710431360954794004'].includes(message.channel.id)) return;
+if (!message.channel.nsfw) return;
   try {
     const { url } = await fetch(`https://scathach.redsplit.org/v3/porn/?tags=${args}`).then(response => response.json());
     if (!url[0]) return message.reply('Your query returned no results');
