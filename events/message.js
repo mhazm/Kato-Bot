@@ -3,8 +3,8 @@ const Discord = require('discord.js'),
   db = require('quick.db')
 
 module.exports = async (client, message) => {
+  
   if (message.channel.type === "dm" || message.author.bot || message.author === client.user) return;
-
 
   let prefix;
   if (message.content.toLowerCase().startsWith(client.config.discord.prefix[0])) {
@@ -29,12 +29,30 @@ module.exports = async (client, message) => {
     message.flags.push(args.shift().slice(1));
   } // Ini tuh ibaratkan parameter.
 
+  
+
   let commandFile = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));
   if (!commandFile) return;
   if (!cooldowns.has(commandFile.help.name)) {
     cooldowns.set(commandFile.help.name, new Discord.Collection());
   }
 
+  //dsaible all commands  
+  let channels = db.get('disableAllCommands');
+  if (channels === null) channels = []; 
+  if (channels.includes(message.channel.id)) {
+    if (commandFile.help.name === 'on') commandFile.run(client, message, args);
+      else return;
+  }
+
+  //disable specifict channel
+  let table = new db.table('disableCommands');
+  let channel = table.get(commandFile.help.name);
+  if (channel === null) channel = [];
+  //disable cmd if channelID available in db
+  if (channel.includes(message.channel.id)) return;
+
+  
   const member = message.member;
   const now = Date.now();
   const timestamps = cooldowns.get(commandFile.help.name);
@@ -58,7 +76,7 @@ module.exports = async (client, message) => {
     setTimeout(() => timestamps.delete(member.id), cooldownAmount);
   }
 
-  //Permission
+
 
   try {
     let command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd)); // Jalani command dengan aliases juga bisa. Misalnya: k!serverinfo, k!server, k!s
