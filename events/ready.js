@@ -5,16 +5,16 @@ module.exports = client => {
   client.user.setStatus('idle');
 
   function randomStatus() {
-    let userTotal = client.guilds.cache.get("336336077755252738").memberCount;
+    let userTotal = client.guilds.cache.get("781212267236163594").memberCount;
     let status = [
-      "Perkumpulan Orang Santai",
+      "Westmanga member",
       "type k!help",
-      "Kato Megumi (o゜▽゜)o☆",
+      "Asura sama~",
       `Members : ${userTotal}`,
-      'HBD Kato Megumi 🎉🎉'
+      'update Tono Kanri'
     ];
     let rstatus = Math.floor(Math.random() * status.length);
-    client.user.setActivity(status[rstatus], { type: 'PLAYING' });
+    client.user.setActivity(status[rstatus], { type: 'WATCHING' });
 
   }; setInterval(randomStatus, 15000);
 

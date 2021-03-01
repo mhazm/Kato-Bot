@@ -1,7 +1,6 @@
 const { Client, Collection } = require("discord.js");
 const { Player } = require('discord-player');
 const Util = require("./util");
-const Komiku = require('./KomikuReader.js');
 const MangaDex = require('./MangaDex.js');
 const Samehadaku = require('./Samehadaku.js');
 const Kusonime = require('./Kusonime.js');

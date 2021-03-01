@@ -7,11 +7,11 @@ exports.run = async (client, message, args) => {
     let botembed = new Discord.MessageEmbed()
       .setColor(client.warna.kato)
       .setThumbnail(bicon)
-      .addField("Nama", "Kato Megumi")
-      .addField("Tanggal Lahir", "23 September")
-      .addField("Pemilik", "ManLord#3143")
+      .addField("Nama", "Kosuke")
+      .addField("Gender", "Male")
+      .addField("Pemilik", "Asura")
       .addField("Bahasa", "Discord.JS dengan NodeJS")
-      .addField("Motto", "Bagi Steam Wallet")
+      .addField("Motto", "Eue everytime")
       .addField("Terima Kasih Kepada", "Karen-Araragi-Master dan Kato Megumi Fanbase Server")
       .addField("Tim Pengembang", "The OwO Family dan Bot Commander Kato Megumi Fanbase")
       .setFooter("Stable Release | ManLord#3143")
@@ -24,13 +24,13 @@ exports.run = async (client, message, args) => {
 }
 
 exports.conf = {
-  aliases: ["kato"],
+  aliases: ["kosuke"],
   cooldown: 5
 }
 
 exports.help = {
   name: 'about',
-  description: 'melihat tentang Kato-Bot',
+  description: 'melihat tentang Kosuke',
   usage: 'k!about',
   example: 'k!about'
 }

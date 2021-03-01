@@ -7,7 +7,7 @@ module.exports = (client, message) => {
     let moment = require('moment')(Date.now()).utcOffset("+0700");
     let jam = moment.hours();
     let menit = moment.minutes();
-    let channel = '753219182967128154';
+    let channel = '781212267236163598';
 
     if (jam == 6 && menit == 0) {
         embed.setImage(kato.pagi)

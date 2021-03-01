@@ -29,7 +29,7 @@ exports.run = async (client, message, args) => {
         .addField("❯ Uptime", `\`${duration}\``, true)
         .addField("❯ Ping", `API : \`${Math.floor(client.ws.ping)}ms\`\nLatency : \`${message.createdTimestamp} ms\``, true)
         .addField("❯ Client", `Server: \`${client.guilds.cache.size} Joined\`\nChannels: \`${client.channels.cache.size} Channels\`\nUsers: \`${client.users.cache.size} Users\``, true)
-        .setFooter(`⌨ ${client.user.username} 2020`)
+        .setFooter(`⌨ ${client.user.username} 2021`)
         .setColor("RANDOM")
         .setTimestamp()
       message.channel.send(embed);
@@ -48,7 +48,7 @@ exports.conf = {
 
 exports.help = {
   name: 'stats',
-  description: 'Melihat spesifikasi PC yang dipakai oleh Kato-Bot',
+  description: 'Melihat spesifikasi PC yang dipakai oleh kosuke',
   usage: 'k!stats',
   example: 'k!stats'
 }

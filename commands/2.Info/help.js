@@ -11,9 +11,9 @@ exports.run = async (client, message, args) => {
     const embed = new MessageEmbed()
       .setColor(client.warna.kato)
       .setTimestamp()
-      .setFooter(`© 2020, Perkumpulan Orang Santai • Total: ${client.commands.size} commands`, client.user.avatarURL)
+      .setFooter(`© 2021, Westmanga • Total: ${client.commands.size} commands`, client.user.avatarURL)
       .setDescription(`Ketik \`${prefix[0]}help [command] / ${prefix[1]}help [command]\` untuk menambahkan informasi lebih lanjut mengenai sebuah perintah.`)
-      .setTitle(`<:kato:750342786825584811> ${client.user.username}-Bot Command List <:kato:750342786825584811>`)
+      .setTitle(`<:westmanga:781212267236163594> ${client.user.username}-Bot Command List <:westmanga:781212267236163594>`)
 
     for (const mod of module) {
       embed.addField(`${mod.name}`, mod.cmds.map(x => `\`${x}\``).join(' . '), true);
@@ -50,7 +50,7 @@ exports.conf = {
 
 exports.help = {
   name: 'help',
-  description: 'Menampilkan daftar perintah bot Kato.',
+  description: 'Menampilkan daftar perintah bot kosuke.',
   usage: 'help [command name]',
   example: 'help [command name]'
 }

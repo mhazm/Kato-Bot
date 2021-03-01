@@ -35,8 +35,8 @@ exports.run = async (client, message, args) => {
     .setColor(client.warna.kato)
     .addField("ID", user.id, true)
     .addField("Nickname", nickname, true)
-    .addField("Created Account Date", `${createdate} \nsince ${created} day(s) ago`, true)
-    .addField("Joined Guild Date", `${joindate} \nsince ${joined} day(s) ago`, true)
+    .addField("Tanggal Pembuatan Akun", `${createdate} \nsejak ${created} hari lalu`, true)
+    .addField("Tanggal Bergabung", `${joindate} \nsejak ${joined} hari lalu`, true)
     .addField("Status", status, true)
     .addField("Game", game(), true)
 

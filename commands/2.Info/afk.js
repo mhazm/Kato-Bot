@@ -37,6 +37,6 @@ exports.conf = {
 exports.help = {
     name: 'afk',
     description: 'menambahkan status afk pada user',
-    usage: 'k!avatar [mention/userid/server]',
-    example: 'k!avatar @juned | k!avatar 458342161474387999 | k!avatar server'
+    usage: 'k!afk [alasan afk]',
+    example: 'k!afk mau berak'
 }

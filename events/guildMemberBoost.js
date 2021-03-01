@@ -14,7 +14,7 @@ module.exports = async (client, member) => {
     let embed = new discord.MessageEmbed()
         .setColor(client.warna.kato)
         .setAuthor('Member Boost', 'https://cdn.discordapp.com/emojis/638719606738911236.gif')
-        .setDescription(`Hai ${member}, terima kasih telah boost di server Perkumpulan Orang Santai ヾ(≧▽≦*)o `)
+        .setDescription(`Hai ${member}, terima kasih telah boost di ${member.guild.name} ヾ(≧▽≦*)o `)
         .setImage(p[rstatus])
-    client.channels.cache.get('753219182967128154').send(embed)
+    client.channels.cache.get('788268058132348958').send(embed)
 }
